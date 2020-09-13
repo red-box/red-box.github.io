@@ -1,0 +1,900 @@
+//Colors.
+$htmlColor:#FD9494;
+$javaScriptColor:#96E493;
+$reactJsColor:#9BC7F8;
+$designColor:#DAA1F9;
+$showAllColor:#808080;
+$grey: #F2F0F0;
+$lightRed:#EB383F;
+$lightBlue:#3E7BE6;
+$lightGrey:#F2F2F2;
+$purple:#4F3FA7;
+
+//Fonts.
+@font-face{
+  font-family: hindMadurai-regular;
+  src: url(./fonts/Hind_Madurai/HindMadurai-Regular.ttf);
+}
+@font-face{
+  font-family: poppins-med;
+  src: url(./fonts/Poppins/Poppins-SemiBold.ttf);
+}
+@font-face{
+  font-family: poppins-regular;
+  src: url(./fonts/Poppins/Poppins-Regular.ttf);
+}
+
+//Flex Mixins.
+@mixin flexRowSpaceBetweenCenter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+//General Settings.
+
+body{
+  min-width:320px;
+  margin: 0;
+  display: flex;
+  justify-content: space-around; //center wrapper
+}
+h1,h2,h3,h4,h5{
+  margin: 0;
+  font-family: 'poppins-med';
+}
+p{
+  margin: 0;
+  font-family: 'hindMadurai-regular';
+  font-size: 18px;
+}
+
+button{
+  background: transparent;
+  padding: 4px 11px;
+  transition: all 0.1s ease-in-out;
+  border: 1px solid;
+  height: 35px;
+}
+
+//Content CSS.
+.mainWrapper{
+  width: 100vw;
+  height: 100%;
+  min-height: 100vh;
+  max-width: 1450px;
+  min-width: 320px;
+  padding: 0 4%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+//Logo* and hamburger menu.
+.header{
+  position: relative;
+  height: 85px;
+  width: 100%;
+  margin-bottom: 15px;
+  @include flexRowSpaceBetweenCenter();
+
+  h2{
+    font-size: 30px;
+    font-weight: 500;
+  }
+  .menuWrapper{
+    position: relative;
+    width: 28px;
+    height: 28px;
+    
+    &:hover{
+      .mBot{
+        top: 3px;
+        left: 3px;
+      }
+    }
+    .menuBar{
+      height: 5px;
+      width: 28px;
+      margin-bottom: 6px;
+      background: black;
+      transition: all .1s ease;
+  
+      &:nth-child(3){
+        width: 50%;
+      }
+    }
+    .mTop{
+      position:absolute;
+      z-index: 10;
+    }
+    .mBot{
+      transition: all .1s ease;
+      position: absolute;
+      z-index: -10;
+      top: 0;
+      left: 0;
+      
+      .menuBar{
+        background: red;
+      }
+    }
+  
+    .menuToggle{
+      position: relative;
+  
+      &:nth-child(1){
+        top:11px;
+        transform: rotate(45deg);
+      }
+      &:nth-child(2){
+        top:0px;
+        transform: rotate(-45deg);
+      }
+      &:nth-child(3){
+        display: none;
+      }
+    }
+  }
+  .linkWrapper{
+    position: absolute;
+    width: 250px;
+    height: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    right: 40px;
+    overflow: hidden;
+  
+    p{
+      position: absolute;
+      font-size: 1.3em;
+      font-weight: 600;
+      margin-right: 10px;
+      padding: 0 10px;
+      transition: all .2s ease;
+  
+      &:nth-child(1){
+        left: 150%;
+      }
+      &:nth-child(2){
+        left: 150%;
+      }
+      &:nth-child(3){
+        left: 150%;
+      }
+
+    }
+    .textToggled{
+      &:nth-child(1){
+        left: 0%;
+      }
+      &:nth-child(2){
+        left: 29%;
+      }
+      &:nth-child(3){
+        left: 58%;
+      }
+    }
+  }
+}
+//Category Button NAV for gallery page.
+.categoryButtonWrapper{
+  margin-bottom: 15px;
+
+  .categoryBtn{
+    margin: 2.5px 1px;  
+  }
+//Border & Hover
+  .htmlEff{
+    border-color: $htmlColor;
+    
+    &:hover{
+      box-shadow: 3px 3px 0px 0px $htmlColor;
+    }
+  }
+  .javaScriptEff{
+    border-color: $javaScriptColor;
+    &:hover{
+      box-shadow: 3px 3px 0px 0px $javaScriptColor;
+    }
+  }
+  .reactJsEff{
+    border-color: $reactJsColor;
+    &:hover{
+      box-shadow: 3px 3px 0px 0px $reactJsColor;
+    }
+  }
+  .designEff{
+    border-color: $designColor;
+    &:hover{
+      box-shadow: 3px 3px 0px 0px $designColor;
+    }
+  }
+  .showAllEff{
+    border-color: $showAllColor;
+    &:hover{
+      box-shadow: 3px 3px 0px 0px $showAllColor;
+    }
+  }
+//Toggle Active
+  .catActive, .showActive{
+    border-color: $lightGrey;
+    color: $lightGrey;
+  }
+  .htmlActive{
+    background-color: $htmlColor;
+  }
+  .javaScriptActive{
+    background-color: $javaScriptColor;
+  }
+  .reactJsActive{
+    background-color: $reactJsColor;
+  }
+  .designActive{
+    background-color: $designColor;
+  }
+  .showAllActive{
+    background-color: $showAllColor;
+  }
+}
+//Gallery & Message.
+.galleryWrapper{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+
+  .galleryItem{
+    display: flex;
+    flex: none;
+    width: 33.33%;
+    height: 444px;  
+    box-sizing: border-box;
+    border: 3px solid $lightGrey;
+    background: $lightBlue;
+
+    display: none;
+    
+    justify-content: center;
+    align-items: center;
+    font-family: "poppins-med";
+    font-size: 3em;
+
+    &:nth-child(even){
+      background: $lightRed;
+    }
+
+  }
+  .galleryItemActive{
+    display: flex;
+  }
+  .galleryDocLoad{
+    display: flex;
+  }
+  .galleryShowAll{
+    display: flex;
+  }
+  .secretMessage{
+    display: none;
+    text-align: center;
+    font-size: 4em;
+    padding-top: 10%;
+  }
+  .secretMessageToggle{
+    display: flex;
+  }
+}
+//Footer.
+.footer{
+  position: absolute;
+  bottom: 0px;
+  width: 90.5%;
+  margin-right: 30px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+
+
+  .footerContent{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+
+    margin-top: 20px;
+    .iconWrapper{
+
+      img{
+        width: 26px;
+        height: 26px;
+        margin-left: 15px;
+      }
+    }
+  }
+}
+
+//Sections
+
+.landingPage{
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 50px;
+}
+.contactPage{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin-bottom: 50px;
+
+  .titleWrapper{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 22px;
+
+    h4{
+      font-family: 'poppins-regular';
+      font-size: 1.2em;
+      font-weight: 500;
+    }
+
+  }
+  .contactDetails{
+    display: flex;
+    flex-wrap: wrap;
+    width: 40%;
+    min-width: 320px;
+    height: 100%;
+    position: relative;
+
+    input{
+      position: relative;
+      width: 100%;
+      font-family: 'poppins-regular';
+      margin-bottom: 10px;
+      background: $grey;
+      padding: 5px 10px;
+      border: 0;
+      font-size: 1em;
+    }
+    .personalDetails{
+      position: relative;
+      width: 280px;
+      height: 100%;
+      margin-bottom: 10px;
+
+      input{
+        &:nth-child(5){
+          width: 215px;
+        }
+        &:nth-child(6){
+          width: 125px;
+        }
+      }
+      button{
+        border: none;
+        position: absolute;
+        z-index: 15;
+      }
+      #copyEmail{
+        width: 235px;
+      }
+      #copyMobile{
+        width: 145px;
+        top: 70px;
+      }
+      .copyToolTip{
+        position: absolute;
+        z-index: 35;
+        top: 4px;
+        left: 220px;
+        opacity: 1;
+        width: 70px;
+        border-radius: 6px;
+        padding: 2px 10px;
+        background: $purple;
+        transition: opacity .3s ease-in-out;
+
+        .corner{
+          position: absolute;
+          top: 13px;
+          left: -2px;
+          width: 0; 
+          height: 0;
+          transform: rotate(201deg);
+          border-top: 12px solid transparent;
+          border-bottom: 4px solid transparent; 
+          border-right:12px solid $purple;
+        }
+        p{
+          font-size: .8em;
+          color: #fff;
+        }
+        ::before{
+          color: #fff;
+        }
+      }
+      ::selection{
+        color: black;
+        background: transparent;
+      }
+
+    }
+    .repoDetails{
+      position: relative;
+      width: 290px;
+      height: 100%;
+
+      a{
+        display: block;
+        
+        width: 100%;
+        font-family: 'poppins-regular';
+        margin-bottom: 10px;
+        background: $grey;
+        padding: 5px 10px;
+        border: 0;
+        font-size: 1em;
+        text-decoration: none;
+        color: black;
+      }
+      a{
+        &:nth-child(3){
+          width: 290px;
+        }
+        &:nth-child(4){
+          width: 210px;
+        }
+      }
+      .goToToolTip{
+        position: absolute;
+        z-index: 35;
+        top: 4px;
+        left: 260px;
+        opacity: 1;
+        width: 46px;
+        border-radius: 6px;
+        padding: 2px 10px;
+        background: $purple;
+        transition: opacity .3s ease-in-out;
+
+        .corner{
+          position: absolute;
+          top: 13px;
+          left: -2px;
+          width: 0; 
+          height: 0;
+          transform: rotate(201deg);
+          border-top: 12px solid transparent;
+          border-bottom: 4px solid transparent; 
+          border-right:12px solid $purple;
+        }
+        p{
+          font-size: .8em;
+          color: #fff;
+        }
+      }
+    }
+    .pageDivider{
+      display: none;
+      margin: 20px auto;
+      margin-left: 7vw;
+      height: 1px;
+      width: 90%;
+      background: $purple;
+    }
+  }
+  .contactForm{
+    width: 60%;
+    min-width: 280px;
+    height: 105%;
+    border-left: 1px solid $purple;
+    box-sizing: border-box;
+
+    
+    form{
+      display: flex;
+      flex-wrap: wrap;
+      width: 95%;
+      font-size: 1em;
+      margin-left: 5%;
+      font-family: 'poppins-regular';
+
+      
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      input[type=number] {
+        -moz-appearance: textfield;
+      }
+
+      h4{
+        font-family: 'poppins-regular';
+        font-size: 1.2em;
+        font-weight: 500;
+      }
+      .formTitle{
+        width: 90%;
+
+        padding: 10px 0;
+      }
+
+      label{
+        margin-left: 24px;
+        margin-bottom: 5px;
+      }
+
+      input{
+        width: 295px;
+        height: 30px;
+        padding: 0 5px;
+        margin: 0 24px 24px 24px;
+        background: $grey;
+        border: none;
+        box-shadow: 2px 2px 0px 0px $purple;
+        box-sizing: border-box;
+        font-size: 1em;
+        font-family: 'poppins-regular';
+        
+      }
+
+      textarea{
+        max-width: 628px;
+        min-width: 260px;
+        margin: 0 24px 24px 24px;
+        box-shadow: 2px 2px 0px 0px $purple;
+        border: 0;
+        background: $lightGrey;
+        padding: 5px;
+        font-size: 1em;
+        font-family: 'poppins-regular';
+      }
+    }
+    .formItem{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content:center;
+
+      &:nth-child(6){
+        width: 100%;
+      }
+      
+    }
+    .formBtnWrapper{
+      display: flex;
+      justify-content: flex-end;
+      width: 703px;
+      min-width: 295px;
+      height: 40px;
+      box-sizing: border-box;
+
+      button{
+        margin-left: 20px;
+
+        &:hover{
+          box-shadow: 3px 3px 0px 0px $purple;
+        }
+      }
+    }
+    #email-error, #name-error, #message-error{
+      position: absolute;
+      font-size: .9em;
+      top: 62px;
+      font-family: 'poppins-regular';
+      color: $lightRed;
+    }
+    #message-error{
+      top: 192px;
+    }
+
+  }
+  .hideWrapper{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+}
+.aboutPage{
+  position: relative;
+  display: none;
+  width: 100%;
+  height: 800px;
+  overflow: hidden;
+  margin-bottom: 50px;
+
+  .titleWrapper{
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    top: 0;
+
+    h4{
+      font-family: 'poppins-regular';
+      font-size: 1.2em;
+      font-weight: 500;
+    }
+  }
+  .textWrapper{
+    position: absolute;
+    min-width: 287px;
+    left: 0;
+    top: 40px;
+    width: 40%;
+    height: 100%;
+    z-index: 10;
+
+    p{
+      width: 95%;
+      font-family: 'poppins-regular';
+      font-weight: 400;
+      font-size: 1em;
+    }
+    .resumeBtn{
+      position: absolute;
+      left: 0; 
+      right: 8%;
+      width: 80px;
+      margin-left: auto; 
+      margin-right: auto; 
+      margin-top: 10px;
+
+      &:hover{
+        box-shadow: 3px 3px 0px 0px $showAllColor;
+      }
+
+    }
+    .textBackground{
+      position: absolute;
+      height: 26px;
+      background: #fff;
+      z-index: -5;
+      
+      &:nth-child(1){
+        width: 226px;
+        top: 2px;
+      }
+      &:nth-child(2){
+        width: 252px;
+        top: 25px;
+      }
+      &:nth-child(3){
+        width: 267px;
+        top: 51px;
+      }
+      &:nth-child(4){
+        width: 274px;
+        top: 76px;
+      }
+      &:nth-child(5){
+        width: 130px;
+        top: 101px;
+      }
+      &:nth-child(6){
+        width: 272px;
+        top: 151px;
+      }
+      &:nth-child(7){
+        width: 260px;
+        top: 176px;
+      }
+      &:nth-child(8){
+        width: 248px;
+        top: 201px;
+      }
+      &:nth-child(9){
+        width: 258px;
+        top: 226px;
+      }
+      &:nth-child(10){
+        width: 230px;
+        top: 251px;
+      }
+      &:nth-child(11){
+        width: 250px;
+        top: 275px;
+      }
+      &:nth-child(12){
+        width: 200px;
+        top: 301px;
+      }
+      &:nth-child(13){
+        width: 130px;
+        top: 326px;
+      }
+      &:nth-child(14){
+        width: 232px;
+        top: 376px;
+      }
+      &:nth-child(15){
+        width: 254px;
+        top: 400px;
+      }
+      &:nth-child(16){
+        width: 270px;
+        top: 426px;
+      }
+    }
+  }
+  .portraitWrapper{
+    position: absolute;
+    min-width: 320px;
+    right: 0;
+    top: 40px;
+    width: 60%;
+    height: 530px;
+    z-index: 0;
+
+    img{
+      width: 100%;
+      position: absolute;
+      height: auto;
+    }
+  }
+  .galleryWrapper{
+    position: absolute;
+    min-width: 850px;
+    bottom: 0;
+    width: 100%;
+    height: 240px;
+
+      img{
+        position: absolute;
+        width: 200px;
+        bottom: 0;
+        
+        &:nth-child(1){
+          left: 3%;
+        }
+        &:nth-child(2){
+          left: 13%;
+        }
+        &:nth-child(3){
+          left: 23%;
+        }
+      }
+  }
+}
+.pageActive{
+  display: flex !important;
+}
+
+
+
+// ViewPort Sizes rules.
+
+
+@media only screen and (max-width: 1310px){
+  .contactForm{
+    form{
+      input{
+        width: 350px !important;
+      }
+      textarea{
+        max-width: 340px !important;
+      }
+
+    }
+    
+    .formBtnWrapper{
+      width: 100% !important;
+      max-width: 405px;
+    }
+  }
+}
+@media only screen and (max-width: 1020px){
+  .galleryWrapper{
+    .galleryItem{
+      width: 50%;
+    }
+    .secretMessage{
+      font-size: 2em;
+    }
+  }
+}
+@media only screen and (max-width: 870px){
+  .contactPage{
+    display: flex;
+    
+    .contactDetails{
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+
+      .personalDetails{
+        margin-right: 10px;
+      }
+      .pageDivider{
+        display: block;
+      }
+    }
+    .contactForm{
+      width: 90%;
+      border: 0;
+
+      form{
+        margin: 0 auto;
+        width: 100%;
+
+        label{
+          margin: 0 24px;
+        }
+        input{
+          width: 50%;
+          max-width: 270px !important;
+          box-sizing: border-box;
+          margin: 24px 24px;
+        }
+        textarea{
+          max-width: 680px !important;
+        }
+      }
+      .formBtnWrapper{
+        padding-right: 24px;
+        width: 100% !important;
+        max-width: 690px !important; 
+      }
+    }
+  }
+}
+@media only screen and (max-width: 870px){
+  .contactPage{
+
+    .contactForm{
+      
+      form{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        input{
+          margin-left: 0 !important;
+        }
+        label{
+          margin-left: 0 !important;
+        }
+        textarea{
+          margin-left: 0 !important;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 688px){
+  .contactPage{
+    .contactDetails{
+      width: 90%;
+    }
+  }
+}
+@media only screen and (max-width: 650px){
+  .galleryWrapper{
+    .galleryItem{
+      width: 100%;
+    }
+  }
+}
+@media only screen and (max-width: 745px){
+  .contactPage{
+    .contactDetails{
+      .personalDetails{
+        .copyToolTip{
+          left: 180px;
+        }
+        .copyToggle{
+          left: 180px;
+        }
+      }
+    }
+  }
+}
+
+
