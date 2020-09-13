@@ -392,9 +392,7 @@ button {
 }
 
 .contactPage {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-align: start;
@@ -424,7 +422,7 @@ button {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 40%;
+  width: 80%;
   min-width: 320px;
   height: 100%;
   position: relative;
@@ -519,6 +517,7 @@ button {
 
 .contactPage .contactDetails .repoDetails {
   position: relative;
+  margin-left: 100px;
   width: 290px;
   height: 100%;
 }
@@ -583,140 +582,6 @@ button {
   height: 1px;
   width: 90%;
   background: #4F3FA7;
-}
-
-.contactPage .contactForm {
-  width: 60%;
-  min-width: 280px;
-  height: 105%;
-  border-left: 1px solid #4F3FA7;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.contactPage .contactForm form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 95%;
-  font-size: 1em;
-  margin-left: 5%;
-  font-family: 'poppins-regular';
-}
-
-.contactPage .contactForm form input::-webkit-outer-spin-button,
-.contactPage .contactForm form input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.contactPage .contactForm form input[type=number] {
-  -moz-appearance: textfield;
-}
-
-.contactPage .contactForm form h4 {
-  font-family: 'poppins-regular';
-  font-size: 1.2em;
-  font-weight: 500;
-}
-
-.contactPage .contactForm form .formTitle {
-  width: 90%;
-  padding: 10px 0;
-}
-
-.contactPage .contactForm form label {
-  margin-left: 24px;
-  margin-bottom: 5px;
-}
-
-.contactPage .contactForm form input {
-  width: 295px;
-  height: 30px;
-  padding: 0 5px;
-  margin: 0 24px 24px 24px;
-  background: #F2F0F0;
-  border: none;
-  -webkit-box-shadow: 2px 2px 0px 0px #4F3FA7;
-          box-shadow: 2px 2px 0px 0px #4F3FA7;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-size: 1em;
-  font-family: 'poppins-regular';
-}
-
-.contactPage .contactForm form textarea {
-  max-width: 628px;
-  min-width: 260px;
-  margin: 0 24px 24px 24px;
-  -webkit-box-shadow: 2px 2px 0px 0px #4F3FA7;
-          box-shadow: 2px 2px 0px 0px #4F3FA7;
-  border: 0;
-  background: #F2F2F2;
-  padding: 5px;
-  font-size: 1em;
-  font-family: 'poppins-regular';
-}
-
-.contactPage .contactForm .formItem {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.contactPage .contactForm .formItem:nth-child(6) {
-  width: 100%;
-}
-
-.contactPage .contactForm .formBtnWrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  width: 703px;
-  min-width: 295px;
-  height: 40px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.contactPage .contactForm .formBtnWrapper button {
-  margin-left: 20px;
-}
-
-.contactPage .contactForm .formBtnWrapper button:hover {
-  -webkit-box-shadow: 3px 3px 0px 0px #4F3FA7;
-          box-shadow: 3px 3px 0px 0px #4F3FA7;
-}
-
-.contactPage .contactForm #email-error, .contactPage .contactForm #name-error, .contactPage .contactForm #message-error {
-  position: absolute;
-  font-size: .9em;
-  top: 62px;
-  font-family: 'poppins-regular';
-  color: #EB383F;
-}
-
-.contactPage .contactForm #message-error {
-  top: 192px;
-}
-
-.contactPage .hideWrapper {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
 }
 
 .aboutPage {

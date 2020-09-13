@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  //sectionSelect('landingPage');
+  sectionSelect('landingPage');
   $('.menuWrapper').on('click',function(){
     $('.menuBar').toggleClass('menuToggle');
     menuToggle();

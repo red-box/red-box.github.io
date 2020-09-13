@@ -325,7 +325,7 @@ button{
   margin-bottom: 50px;
 }
 .contactPage{
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   align-items: flex-start;
   width: 100%;
@@ -348,7 +348,7 @@ button{
   .contactDetails{
     display: flex;
     flex-wrap: wrap;
-    width: 40%;
+    width: 80%;
     min-width: 320px;
     height: 100%;
     position: relative;
@@ -428,6 +428,7 @@ button{
     }
     .repoDetails{
       position: relative;
+      margin-left: 100px;
       width: 290px;
       height: 100%;
 
@@ -489,119 +490,6 @@ button{
       width: 90%;
       background: $purple;
     }
-  }
-  .contactForm{
-    width: 60%;
-    min-width: 280px;
-    height: 105%;
-    border-left: 1px solid $purple;
-    box-sizing: border-box;
-
-    
-    form{
-      display: flex;
-      flex-wrap: wrap;
-      width: 95%;
-      font-size: 1em;
-      margin-left: 5%;
-      font-family: 'poppins-regular';
-
-      
-      input::-webkit-outer-spin-button,
-      input::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-      }
-
-      input[type=number] {
-        -moz-appearance: textfield;
-      }
-
-      h4{
-        font-family: 'poppins-regular';
-        font-size: 1.2em;
-        font-weight: 500;
-      }
-      .formTitle{
-        width: 90%;
-
-        padding: 10px 0;
-      }
-
-      label{
-        margin-left: 24px;
-        margin-bottom: 5px;
-      }
-
-      input{
-        width: 295px;
-        height: 30px;
-        padding: 0 5px;
-        margin: 0 24px 24px 24px;
-        background: $grey;
-        border: none;
-        box-shadow: 2px 2px 0px 0px $purple;
-        box-sizing: border-box;
-        font-size: 1em;
-        font-family: 'poppins-regular';
-        
-      }
-
-      textarea{
-        max-width: 628px;
-        min-width: 260px;
-        margin: 0 24px 24px 24px;
-        box-shadow: 2px 2px 0px 0px $purple;
-        border: 0;
-        background: $lightGrey;
-        padding: 5px;
-        font-size: 1em;
-        font-family: 'poppins-regular';
-      }
-    }
-    .formItem{
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content:center;
-
-      &:nth-child(6){
-        width: 100%;
-      }
-      
-    }
-    .formBtnWrapper{
-      display: flex;
-      justify-content: flex-end;
-      width: 703px;
-      min-width: 295px;
-      height: 40px;
-      box-sizing: border-box;
-
-      button{
-        margin-left: 20px;
-
-        &:hover{
-          box-shadow: 3px 3px 0px 0px $purple;
-        }
-      }
-    }
-    #email-error, #name-error, #message-error{
-      position: absolute;
-      font-size: .9em;
-      top: 62px;
-      font-family: 'poppins-regular';
-      color: $lightRed;
-    }
-    #message-error{
-      top: 192px;
-    }
-
-  }
-  .hideWrapper{
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
   }
 }
 .aboutPage{
