@@ -773,19 +773,6 @@ button {
   display: flex !important;
 }
 
-@media only screen and (max-width: 1310px) {
-  .contactForm form input {
-    width: 350px !important;
-  }
-  .contactForm form textarea {
-    max-width: 340px !important;
-  }
-  .contactForm .formBtnWrapper {
-    width: 100% !important;
-    max-width: 405px;
-  }
-}
-
 @media only screen and (max-width: 1020px) {
   .galleryWrapper .galleryItem {
     width: 50%;
@@ -815,54 +802,6 @@ button {
   }
   .contactPage .contactDetails .pageDivider {
     display: block;
-  }
-  .contactPage .contactForm {
-    width: 90%;
-    border: 0;
-  }
-  .contactPage .contactForm form {
-    margin: 0 auto;
-    width: 100%;
-  }
-  .contactPage .contactForm form label {
-    margin: 0 24px;
-  }
-  .contactPage .contactForm form input {
-    width: 50%;
-    max-width: 270px !important;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    margin: 24px 24px;
-  }
-  .contactPage .contactForm form textarea {
-    max-width: 680px !important;
-  }
-  .contactPage .contactForm .formBtnWrapper {
-    padding-right: 24px;
-    width: 100% !important;
-    max-width: 690px !important;
-  }
-}
-
-@media only screen and (max-width: 870px) {
-  .contactPage .contactForm form {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .contactPage .contactForm form input {
-    margin-left: 0 !important;
-  }
-  .contactPage .contactForm form label {
-    margin-left: 0 !important;
-  }
-  .contactPage .contactForm form textarea {
-    margin-left: 0 !important;
   }
 }
 

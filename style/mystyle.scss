@@ -661,24 +661,7 @@ button{
 // ViewPort Sizes rules.
 
 
-@media only screen and (max-width: 1310px){
-  .contactForm{
-    form{
-      input{
-        width: 350px !important;
-      }
-      textarea{
-        max-width: 340px !important;
-      }
 
-    }
-    
-    .formBtnWrapper{
-      width: 100% !important;
-      max-width: 405px;
-    }
-  }
-}
 @media only screen and (max-width: 1020px){
   .galleryWrapper{
     .galleryItem{
@@ -703,55 +686,6 @@ button{
       }
       .pageDivider{
         display: block;
-      }
-    }
-    .contactForm{
-      width: 90%;
-      border: 0;
-
-      form{
-        margin: 0 auto;
-        width: 100%;
-
-        label{
-          margin: 0 24px;
-        }
-        input{
-          width: 50%;
-          max-width: 270px !important;
-          box-sizing: border-box;
-          margin: 24px 24px;
-        }
-        textarea{
-          max-width: 680px !important;
-        }
-      }
-      .formBtnWrapper{
-        padding-right: 24px;
-        width: 100% !important;
-        max-width: 690px !important; 
-      }
-    }
-  }
-}
-@media only screen and (max-width: 870px){
-  .contactPage{
-
-    .contactForm{
-      
-      form{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        input{
-          margin-left: 0 !important;
-        }
-        label{
-          margin-left: 0 !important;
-        }
-        textarea{
-          margin-left: 0 !important;
-        }
       }
     }
   }
